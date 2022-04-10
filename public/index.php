@@ -83,7 +83,7 @@ $lists = query( "SELECT list FROM kategori");
                             <?= number_format($product['price'],0,',','.') ?>,-</p>
                         <?php endif ?>
                         <a class="text-xs text-center justify-self-end rounded-sm bg-indigo-800 px-3 py-2 text-white transition-all hover:bg-indigo-600 active:bg-indigo-900"
-                            href="<?= $product['link'] ?>" target="_blank">Pesan Sekarang</a>
+                            href="<?= $product['link'].$product['id'] ?>" target="_blank">Pesan Sekarang</a>
                         <a class="text-xs text-center justify-self-end rounded-sm bg-indigo-800 px-3 py-2 text-white transition-all hover:bg-indigo-600 active:bg-indigo-900"
                             href="detail.php?id=<?=$product['id']?>" target="_blank">Lihat</a>
                     </div>

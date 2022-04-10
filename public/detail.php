@@ -98,7 +98,7 @@ $produk = query( "SELECT * FROM products WHERE id = $id")[0];
                     </p>
                     <button class="button" id="readmore">Read More</button>
                     <button class="button">
-                        <a href="<?=$produk['link'] ?>" target="_blank">Pesan Sekarang</a>
+                        <a href="<?=$product['link'].$product['id'] ?>" target="_blank">Pesan Sekarang</a>
                     </button>
                 </div>
             </div>
