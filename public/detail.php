@@ -18,14 +18,14 @@ $produk = query( "SELECT * FROM products WHERE id = $id")[0];
     <meta property="og:url" content="<?=$webUrl?><?= $_SERVER['PHP_SELF'];?>">
     <meta property="og:title" content="<?= $produk['produk'] ?>">
     <meta property="og:description" content="<?=$produk['deskripsi']?>">
-    <meta property="og:image" content="<?=$webUrl?>assets/img/produk<?=$produk['image']?>">
+    <meta property="og:image" content="<?=$webUrl?>assets/img/produk/<?=$produk['image']?>">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="<?=$webUrl?><?= $_SERVER['PHP_SELF'];?>">
     <meta property="twitter:title" content="<?= $produk['produk'] ?>">
     <meta property="twitter:description" content="<?=$produk['deskripsi']?>">
-    <meta property="twitter:image" content="<?=$webUrl?>assets/img/produk<?=$produk['image']?>">
+    <meta property="twitter:image" content="<?=$webUrl?>assets/img/produk/<?=$produk['image']?>">
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@18657a9/css/all.min.css" rel="stylesheet"
         type="text/css" />
     <link rel="stylesheet" href="<?=$webUrl?>css/style.css" />
