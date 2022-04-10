@@ -1,15 +1,15 @@
 <header>
     <aside class="sidebar -translate-x-full" id="nav">
         <div>
-            <a href="admin.php" class="group hover:font-semibold"><i class="fa-duotone fa-grid-2 group-hover:ml-3"></i>
+            <a href="admin" class="group hover:font-semibold"><i class="fa-duotone fa-grid-2 group-hover:ml-3"></i>
                 <span>Dashboard</span></a>
-            <a href="tambah.php" class="group hover:font-semibold"><i
+            <a href="tambah" class="group hover:font-semibold"><i
                     class="fa-duotone fa-square-plus group-hover:ml-3"></i>
                 <span>Tambah Produk</span></a>
-            <a href="tambah-kategori.php" class="group hover:font-semibold"><i
+            <a href="tambah-kategori" class="group hover:font-semibold"><i
                     class="fa-duotone fa-square-plus group-hover:ml-3"></i>
                 <span>Tambah Kategori</span></a>
-            <a href="auth/logout.php" class="group hover:font-semibold"><i
+            <a href="auth/logout" class="group hover:font-semibold"><i
                     class="fa-duotone fa-arrow-up-left-from-circle group-hover:ml-3 "></i>
                 <span>Log Out</span></a>
         </div>
