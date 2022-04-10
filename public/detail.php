@@ -11,11 +11,10 @@ $produk = query( "SELECT * FROM products WHERE id = $id")[0];
     <!-- Primary Meta Tags -->
     <title><?= $produk['produk'] ?></title>
     <meta name="title" content="<?= $produk['produk'] ?>">
-    <meta name="description"
-        content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
+    <meta name="description" content="<?=$produk['deskripsi']?>">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="<?=$produk['produk']?>">
     <meta property="og:url" content="<?= $_SERVER['PHP_SELF'];?>">
     <meta property="og:title" content="<?= $produk['produk'] ?>">
     <meta property="og:description"
