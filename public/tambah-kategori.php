@@ -1,6 +1,7 @@
-<?php require 'functions/functions.php';
+<?php   
+require 'head.php';
 $lists = query( "SELECT * FROM kategori");
-require 'head.php'?>
+?>
 
 <body class="bg-blue-200">
     <?php require 'header-admin.php'?>

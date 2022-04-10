@@ -1,25 +1,18 @@
-const menu = document.getElementById("menu");
-const nav = document.getElementById("nav");
-const dark = document.getElementById("dark");
-// const produk = document.getElementsByName("produk2");
+// const produk = document.getElementsByName("produk");
+const readMore = document.getElementById("readmore");
+const deskripsi = document.getElementById("deskripsi");
 
-// produk.addEventListener("click", () => {
-//   console.log("p");
+// produk.forEach((el) => {
+//   el.addEventListener("click", () => {
+//     location = el.getAttribute("href");
+//   });
 // });
 
-menu.addEventListener("click", () => {
-  if (nav.classList.contains("-translate-x-full")) {
-    menu.innerHTML = `<i class="fa-solid fa-x"></i>`;
+readMore.addEventListener("click", () => {
+  deskripsi.classList.toggle("line-clamp-6");
+  if (readMore.innerHTML != "Hide") {
+    readMore.innerHTML = "Hide";
   } else {
-    menu.innerHTML = `<i class="fa-solid fa-bars"></i>`;
-  }
-  nav.classList.toggle("-translate-x-full");
-});
-
-dark.addEventListener("click", () => {
-  if (dark.innerHTML == '<i class="fa-duotone fa-sun"></i>') {
-    dark.innerHTML = '<i class="fa-solid fa-moon"></i>';
-  } else {
-    dark.innerHTML = '<i class="fa-duotone fa-sun"></i>';
+    readMore.innerHTML = "Read More";
   }
 });
