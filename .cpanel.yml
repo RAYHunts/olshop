@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/hunf8754/public_html/ayn/
+    - /bin/cp public/admin.php $DEPLOYPATH
+    - /bin/cp public/detail.php $DEPLOYPATH
+    - /bin/cp public/footer-admin.php $DEPLOYPATH
+    - /bin/cp public/head.php $DEPLOYPATH
+    - /bin/cp public/header-admin.php $DEPLOYPATH
+    - /bin/cp public/index.php $DEPLOYPATH
+    - /bin/cp public/tambah-kategori.php $DEPLOYPATH
+    - /bin/cp public/tambah.php $DEPLOYPATH
+    - /bin/cp -R public/assets $DEPLOYPATH
+    - /bin/cp -R public/css $DEPLOYPATH
+    - /bin/cp -R public/functions $DEPLOYPATH
+    - /bin/cp -R public/js $DEPLOYPATH

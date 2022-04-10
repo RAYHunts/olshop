@@ -9,7 +9,7 @@
             <a href="tambah-kategori.php" class="group hover:font-semibold"><i
                     class="fa-duotone fa-square-plus group-hover:ml-3"></i>
                 <span>Tambah Kategori</span></a>
-            <a href="logout.php" class="group hover:font-semibold"><i
+            <a href="auth/logout.php" class="group hover:font-semibold"><i
                     class="fa-duotone fa-arrow-up-left-from-circle group-hover:ml-3 "></i>
                 <span>Log Out</span></a>
         </div>

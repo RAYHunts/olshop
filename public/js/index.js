@@ -8,6 +8,10 @@ const deskripsi = document.getElementById("deskripsi");
 //   });
 // });
 
+if (deskripsi.clientHeight < 156) {
+  readMore.classList.add("hidden");
+}
+
 readMore.addEventListener("click", () => {
   deskripsi.classList.toggle("line-clamp-6");
   if (readMore.innerHTML != "Hide") {

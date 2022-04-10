@@ -1,6 +1,6 @@
 <?php
 require 'head.php';
-$lists = query( "SELECT * FROM kategori");
+$lists = query( "SELECT list FROM kategori");
 ?>
 
 <body class="bg-slate-500 font-monts select-none">
@@ -60,8 +60,8 @@ $lists = query( "SELECT * FROM kategori");
             $products = query( "SELECT * FROM products WHERE kategori = '$kategori' ");
             if(isset($products[0])) :
             ?>
-            <h1 class="ml-6 text-2xl first-letter:uppercase">
-                <?= $kategori ?>
+            <h1 class="ml-6 text-2xl">
+                <?= ucwords($kategori) ?>
             </h1>
             <div class="list-produk">
                 <?php foreach($products as $product) :?>

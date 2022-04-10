@@ -23,7 +23,7 @@ function tambahProduk($produk) {
         return false;
     }
     $kategori =  htmlspecialchars(mysqli_escape_string($conn,strtolower($produk["kategori"])));
-    $link = "https://wa.me/6285156609727?text=Halo%20kak%20Ayn%0ASaya%20tertarik%20dengan%20produk%20berikut%0A%0ANama%20%3A%20$nama%0A%2AHarga%20Promo%20%3A%20Rp%20$promo%2C-%2A%0A";
+    $link = "https://wa.me/6285156609727?text=Halo%20kak%20Ayn%0ASaya%20tertarik%20dengan%20produk%20berikut%0A%0ANama%20%3A%20$nama%0A%2AHarga%20%3A%20Rp%20$price%2C-%2A%0A";
     $query = "INSERT INTO `products` (`id`, `produk`, `price`, `promo`, `image`, `link`, `kategori`, `status`, `deskripsi`) VALUES (NULL, '$nama', $price, NULL, '$image', '$link', '$kategori', 'available', '$deskripsi')";
     if ($promo > 0){
         $link = "https://wa.me/6285156609727?text=Halo%20kak%20Ayn%0ASaya%20tertarik%20dengan%20produk%20berikut%0A%0ANama%20%3A%20$nama%0AHarga%20%3A%20~Rp%20$price~%2C-%0A%2AHarga%20Promo%20%3A%20Rp%20$promo%2C-%2A%0A";
@@ -73,4 +73,12 @@ function upload(){
     move_uploaded_file($tmpName, 'assets/img/produk/' . $namaFileBaru);
     return $namaFileBaru;
     
+}
+
+function tambahKategori($kategori) {
+    global $conn;
+    $kategori = htmlspecialchars(mysqli_escape_string($conn,strtolower($kategori["kategori"])));
+    $query = "INSERT INTO `kategori` (`id`, `list`) VALUES (NULL, '$kategori')";
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
 }

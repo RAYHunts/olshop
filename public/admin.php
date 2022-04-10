@@ -33,7 +33,7 @@ $products = query( "SELECT * FROM products");
                         <tr class="odd:bg-slate-200 even:bg-slate-400 align-middle">
                             <td class="p-3"><?=$i?></td>
                             <td class="p-3 flex items-center justify-start gap-2 w-60">
-                                <img src="assets/img/produk.jpeg" alt="" srcset="" class="w-20">
+                                <img src="assets/img/produk/<?=$product['image']?>" alt="" srcset="" class="w-20">
                                 <span class="line-clamp-2 text-left"><?=$product['produk']?></span>
                             </td>
                             <td class="p-3 first-letter:uppercase"><?=$product['kategori']?>
@@ -42,12 +42,12 @@ $products = query( "SELECT * FROM products");
                             <td class="p-3">Rp <?= number_format($product['promo'],0,',','.')?>,-</td>
                             <td class="p-3 first-letter:uppercase"><?=$product['status']?></td>
                             <td class="text-white p-3">
-                                <span class=" gap-2 flex">
+                                <span class=" gap-2 flex justify-center">
                                     <a href="#" target="_blank"
                                         class=" bg-green-700 px-2 py-1 rounded-sm hover:bg-green-500 hover:text-red-800">
                                         <i class="fa-duotone fa-pen-to-square"></i>
                                     </a>
-                                    <a href=""
+                                    <a href="hapus.php?id=<?=$product['id']?>"
                                         class="bg-sky-700 py-1 px-2 rounded-sm hover:opacity-20 hover:text-red-800">
                                         <i class="fa-duotone fa-delete-right"></i>
                                     </a>
