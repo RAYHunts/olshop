@@ -47,7 +47,7 @@ $products = query( "SELECT * FROM products");
                                         class=" bg-green-700 px-2 py-1 rounded-sm hover:bg-green-500 hover:text-red-800">
                                         <i class="fa-duotone fa-pen-to-square"></i>
                                     </a>
-                                    <a href="hapus.php?id=<?=$product['id']?>"
+                                    <a href="hapus?id=<?=$product['id']?>"
                                         class="bg-sky-700 py-1 px-2 rounded-sm hover:opacity-20 hover:text-red-800">
                                         <i class="fa-duotone fa-delete-right"></i>
                                     </a>

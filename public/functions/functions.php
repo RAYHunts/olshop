@@ -85,5 +85,9 @@ function tambahKategori($kategori) {
     return mysqli_affected_rows($conn);
 }
 
+function hapus($id) {
+    global $conn;
+    mysqli_query( $conn, "DELETE FROM products WHERE id = $id");
 
-$git = 'git';
+    return mysqli_affected_rows($conn);
+}

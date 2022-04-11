@@ -14,3 +14,4 @@ deployment:
     - /bin/cp -R public/assets $DEPLOYPATH
     - /bin/cp -R public/css $DEPLOYPATH
     - /bin/cp -R public/js $DEPLOYPATH
+    - /bin/cp -R public/auth $DEPLOYPATH
