@@ -10,6 +10,8 @@ deployment:
     - /bin/cp public/index.php $DEPLOYPATH
     - /bin/cp public/tambah-kategori.php $DEPLOYPATH
     - /bin/cp public/tambah.php $DEPLOYPATH
+    - /bin/cp public/hapus.php $DEPLOYPATH
+    - /bin/cp public/edit.php $DEPLOYPATH
     - /bin/cp public/functions/functions.php $DEPLOYPATH
     - /bin/cp -R public/assets $DEPLOYPATH
     - /bin/cp -R public/css $DEPLOYPATH
