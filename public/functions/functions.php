@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+$noWA = '6285156609727';
 $conn = mysqli_connect($host,$username,$pass, $database);
 
 function query( $query) {
@@ -14,6 +15,7 @@ function query( $query) {
 
 function tambahProduk($produk) {
     global $conn;
+    global $noWA;
     $nama = htmlspecialchars(mysqli_escape_string($conn,$produk["nama"]));
     $deskripsi =  htmlspecialchars(mysqli_escape_string($conn,$produk["deskripsi"]));
     $price =  htmlspecialchars(mysqli_escape_string($conn,$produk["price"]));
@@ -23,10 +25,10 @@ function tambahProduk($produk) {
         return false;
     }
     $kategori =  htmlspecialchars(mysqli_escape_string($conn,strtolower($produk["kategori"])));
-    $link = "https://wa.me/6285156609727?text=Halo+kak+Ayn%0D%0ASaya+tertarik+dengan+produk+berikut%0D%0A%0D%0A%2AHarga+%3A+Rp+". number_format($price,0,',','.')."%2C-%2A%0D%0A%0D%0Ahttps%3A%2F%2Fayn.huntstopup.com%2Fdetail.php%3Fid%3D";
+    $link = "https://wa.me/$noWA?text=Halo+kak+Ayn%0D%0ASaya+tertarik+dengan+produk+berikut%0D%0A%0D%0A%2AHarga+%3A+Rp+". number_format($price,0,',','.')."%2C-%2A%0D%0A%0D%0Ahttps%3A%2F%2Fayn.huntstopup.com%2Fdetail.php%3Fid%3D";
     $query = "INSERT INTO `products` (`id`, `produk`, `price`, `promo`, `image`, `link`, `kategori`, `status`, `deskripsi`) VALUES (NULL, '$nama', $price, NULL, '$image', '$link', '$kategori', 'available', '$deskripsi')";
     if ($promo > 0){
-        $link = "https://wa.me/6285156609727?text=Halo%20kak%20Ayn%0D%0ASaya%20tertarik%20dengan%20produk%20berikut%0D%0A%0D%0AHarga%20%3A%20~Rp%20". number_format($price,0,',','.')."~%2C-%0D%0A%2AHarga%20Promo%20%3A%20Rp%20". number_format($promo,0,',','.')."%2C-%2A%0D%0A%0D%0Ahttps%3A%2F%2Fayn.huntstopup.com%2Fdetail.php%3Fid%3D";
+        $link = "https://wa.me/$noWA?text=Halo%20kak%20Ayn%0D%0ASaya%20tertarik%20dengan%20produk%20berikut%0D%0A%0D%0AHarga%20%3A%20~Rp%20". number_format($price,0,',','.')."~%2C-%0D%0A%2AHarga%20Promo%20%3A%20Rp%20". number_format($promo,0,',','.')."%2C-%2A%0D%0A%0D%0Ahttps%3A%2F%2Fayn.huntstopup.com%2Fdetail.php%3Fid%3D";
         $query = "INSERT INTO `products` (`id`, `produk`, `price`, `promo`, `image`, `link`, `kategori`, `status`, `deskripsi`) VALUES (NULL, '$nama', $price, $promo, '$image', '$link', '$kategori', 'available', '$deskripsi')";
     }
     mysqli_query($conn, $query);
@@ -82,3 +84,6 @@ function tambahKategori($kategori) {
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+
+$git = 'git';
