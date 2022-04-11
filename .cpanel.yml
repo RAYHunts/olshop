@@ -12,8 +12,9 @@ deployment:
     - /bin/cp public/tambah.php $DEPLOYPATH
     - /bin/cp public/hapus.php $DEPLOYPATH
     - /bin/cp public/edit.php $DEPLOYPATH
-    - /bin/cp public/functions/functions.php $DEPLOYPATH
     - /bin/cp -R public/assets $DEPLOYPATH
     - /bin/cp -R public/css $DEPLOYPATH
     - /bin/cp -R public/js $DEPLOYPATH
     - /bin/cp -R public/auth $DEPLOYPATH
+    - export DEPLOYPATH=/home/hunf8754/public_html/ayn/functions/
+    - /bin/cp public/functions/functions.php $DEPLOYPATH
