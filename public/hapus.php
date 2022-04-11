@@ -1,8 +1,10 @@
 <?php 
 require 'head.php';
 $id = $_GET["id"];
+?>
 
-
+<body>
+    <?php
 if (hapus($id) > 0 ){
         echo "
         <script>
@@ -11,18 +13,20 @@ if (hapus($id) > 0 ){
                 title: 'Produk berhasil dihaous',
                 showConfirmButton: false, 
                 timer: 1500,
-                }).then(() => {window.location = 'admin';});
-                </script>
-            ";
-    } else {
-        echo "
-                <script>
-                Swal.fire({
-                        icon: 'error',
-                        title: 'Produk gagal dihapus',
-                        showConfirmButton: false, 
-                        timer: 1500,
-                        }).then(() => {window.location = 'admin';});
-                </script>
+        }).then(() => {window.location = 'admin';});
+        </script>
         ";
-    }
+} else {
+        echo "
+        <script>
+        Swal.fire({
+                icon: 'error',
+                title: 'Produk gagal dihapus',
+                showConfirmButton: false, 
+                timer: 1500,
+        }).then(() => {window.location = 'admin';});
+        </script>
+        ";
+}
+?>
+</body>
