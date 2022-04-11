@@ -65,9 +65,11 @@ $lists = query( "SELECT list FROM kategori");
             </h1>
             <div class="list-produk">
                 <?php foreach($products as $product) :?>
-                <div class="produk">
-                    <img src="" alt="">
-                    <img class="h-40 w-40" src="assets/img/produk/<?=$product['image']?>" alt="<?=$product['image']?>">
+                <div class="produk group">
+                    <div class="h-40 w-40 overflow-clip">
+                        <img class="w-40 group-hover:scale-125 transition-all duration-300"
+                            src="assets/img/produk/<?=$product['image']?>" alt="<?=$product['image']?>">
+                    </div>
                     <div class="flex h-max flex-col justify-between w-full gap-2 overflow-hidden p-3">
                         <p class="text-sm line-clamp-2"><?= $product['produk'] ?></p>
                         <?php if($product['promo'] != 0) : ?>
