@@ -88,6 +88,5 @@ function tambahKategori($kategori) {
 function hapus($id) {
     global $conn;
     mysqli_query( $conn, "DELETE FROM products WHERE id = $id");
-
     return mysqli_affected_rows($conn);
 }
